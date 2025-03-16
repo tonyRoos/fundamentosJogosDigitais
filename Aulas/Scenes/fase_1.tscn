@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://jo452xtqtic8"]
+[gd_scene load_steps=7 format=3 uid="uid://jo452xtqtic8"]
 
 [ext_resource type="Texture2D" uid="uid://bti8qvg8wpsoa" path="res://Backgrounds/fundo.jpg" id="1_l3mkw"]
 [ext_resource type="PackedScene" uid="uid://el4jb5kyajf5" path="res://Code/main_character.tscn" id="2_acukj"]
+[ext_resource type="PackedScene" uid="uid://ca8laxsvcpm8n" path="res://GUI/gui.tscn" id="2_cq7l2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acukj"]
 size = Vector2(600, 104)
@@ -20,6 +21,8 @@ scale = Vector2(4, 4)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0.225, 0)
+
+[node name="Control" parent="Camera2D" instance=ExtResource("2_cq7l2")]
 
 [node name="SceneCollision" type="Node" parent="."]
 

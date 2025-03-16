@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bs4ytt0w8g71d"]
 
-[ext_resource type="Texture2D" uid="uid://c5v4aa4eho7m4" path="res://GUI/Border.png" id="1_3kf3n"]
-[ext_resource type="Script" uid="uid://blecjelnk705m" path="res://Code/menu.gd" id="1_syfuq"]
-[ext_resource type="FontFile" uid="uid://bcx383xb2x80x" path="res://GUI/Monocraft.ttc" id="2_6pedr"]
-[ext_resource type="PackedScene" uid="uid://jo452xtqtic8" path="res://Scenes/fase_1.tscn" id="2_s2c3o"]
-[ext_resource type="PackedScene" uid="uid://c8oibuc6qbilb" path="res://Scenes/fase_2.tscn" id="3_ma218"]
+[ext_resource type="Script" uid="uid://blecjelnk705m" path="res://Code/menu.gd" id="1_n45e2"]
+[ext_resource type="PackedScene" uid="uid://jo452xtqtic8" path="res://Scenes/fase_1.tscn" id="2_opfnp"]
+[ext_resource type="PackedScene" uid="uid://c8oibuc6qbilb" path="res://Scenes/fase_2.tscn" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://c5v4aa4eho7m4" path="res://GUI/Border.png" id="4_yhxw7"]
+[ext_resource type="FontFile" uid="uid://bcx383xb2x80x" path="res://GUI/Monocraft.ttc" id="5_trj04"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("buttonList")]
 layout_mode = 3
@@ -13,14 +13,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_syfuq")
+script = ExtResource("1_n45e2")
 buttonList = [NodePath("VBoxContainer/Aula1"), NodePath("VBoxContainer/Aula2")]
-sceneList = Array[PackedScene]([ExtResource("2_s2c3o"), ExtResource("3_ma218")])
+sceneList = Array[PackedScene]([ExtResource("2_opfnp"), ExtResource("3_cp0ys")])
 
 [node name="Border" type="Sprite2D" parent="."]
 position = Vector2(600, 360)
 scale = Vector2(8, 8)
-texture = ExtResource("1_3kf3n")
+texture = ExtResource("4_yhxw7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -40,13 +40,13 @@ alignment = 1
 [node name="Aula1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("2_6pedr")
+theme_override_fonts/font = ExtResource("5_trj04")
 theme_override_font_sizes/font_size = 28
 text = "AULA 1"
 
 [node name="Aula2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("2_6pedr")
+theme_override_fonts/font = ExtResource("5_trj04")
 theme_override_font_sizes/font_size = 28
 text = "AULA 2"

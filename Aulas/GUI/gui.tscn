@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca8laxsvcpm8n"]
+
+[ext_resource type="Script" uid="uid://il5n6y01p6wi" path="res://Code/gui.gd" id="1_x71ey"]
+[ext_resource type="Texture2D" uid="uid://dui5qs5gfjayt" path="res://GUI/BackToMenu.png" id="2_qtfhu"]
+[ext_resource type="Texture2D" uid="uid://2rv0pavqhlhe" path="res://GUI/Restart.png" id="3_2xed4"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("btn_goBack", "btn_reset")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -600.0
+offset_top = -360.0
+offset_right = 600.0
+offset_bottom = 360.0
+script = ExtResource("1_x71ey")
+btn_goBack = NodePath("goBack")
+btn_reset = NodePath("Reset")
+
+[node name="goBack" type="Button" parent="."]
+z_index = 2048
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("2_qtfhu")
+
+[node name="Reset" type="Button" parent="."]
+z_index = 2048
+layout_mode = 0
+offset_left = 104.0
+offset_right = 208.0
+offset_bottom = 104.0
+icon = ExtResource("3_2xed4")

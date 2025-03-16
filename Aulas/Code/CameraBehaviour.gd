@@ -5,7 +5,7 @@ extends Camera2D
 @export var max_position:Vector2
 
 var camera_position: Vector2
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	camera_position.x = clamp( player.transform.origin.x, min_position.x, max_position.x)
 	camera_position.y = clamp( player.transform.origin.y, min_position.y, max_position.y)
 	

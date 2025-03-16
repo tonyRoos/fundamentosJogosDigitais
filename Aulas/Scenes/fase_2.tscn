@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8oibuc6qbilb"]
+[gd_scene load_steps=9 format=3 uid="uid://c8oibuc6qbilb"]
 
 [ext_resource type="PackedScene" uid="uid://el4jb5kyajf5" path="res://Code/main_character.tscn" id="1_eoqrh"]
 [ext_resource type="Script" uid="uid://ssc3xgvr8xyu" path="res://Code/CameraBehaviour.gd" id="2_p0386"]
 [ext_resource type="Texture2D" uid="uid://bti8qvg8wpsoa" path="res://Backgrounds/fundo.jpg" id="3_cs05n"]
+[ext_resource type="PackedScene" uid="uid://ca8laxsvcpm8n" path="res://GUI/gui.tscn" id="3_dh80i"]
+[ext_resource type="PackedScene" uid="uid://bd4b3qegoxthi" path="res://Props/platform.tscn" id="4_p0386"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acukj"]
 size = Vector2(1196.5, 104)
@@ -26,6 +28,9 @@ position_smoothing_speed = 4.0
 script = ExtResource("2_p0386")
 player = NodePath("../main_character")
 max_position = Vector2(1200, 0)
+
+[node name="Control" parent="Camera2D" instance=ExtResource("3_dh80i")]
+texture_filter = 1
 
 [node name="SceneCollision" type="Node" parent="."]
 
@@ -55,3 +60,12 @@ texture = ExtResource("3_cs05n")
 position = Vector2(1201, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("3_cs05n")
+
+[node name="Platform" parent="." instance=ExtResource("4_p0386")]
+position = Vector2(-106, -31)
+
+[node name="Platform2" parent="." instance=ExtResource("4_p0386")]
+position = Vector2(135, -133)
+
+[node name="Platform3" parent="." instance=ExtResource("4_p0386")]
+position = Vector2(513, -31)

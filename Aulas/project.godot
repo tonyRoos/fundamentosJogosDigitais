@@ -8,6 +8,8 @@
 
 config_version=5
 
+currentScene=1
+
 [application]
 
 config/name="Exemplo1"
